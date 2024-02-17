@@ -45,9 +45,10 @@
                     <label for="email">Choose the number of questions </label>
                     <div class="range">
                         <span>5</span>
+                        <span id="q">9</span>
                         <span>12</span>
                     </div>
-                    <input type="range" id="NoQues" class="email" min="5" max="12" required>
+                    <input type="range" id="NoQues" class="email" min="5" max="12" onchange="questionChange()" required>
         
                     <button type="submit" class="start">Start</button>
                 </div>
@@ -56,6 +57,11 @@
     </div>
     <script>
         // Function to open the popup form
+        function questionChange()
+        {
+            var x=document.getElementById('NoQues').value;
+            document.getElementById('q').innerText=x;
+        }
         function openForm() {
             document.getElementById('overlay').style.display = 'flex';
         }
