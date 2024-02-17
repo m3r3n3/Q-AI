@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1jempJxiIPaC3IsqSfWJuMCRwq-IICzF6
 """
 
-import req_gensim
+# import req_gensim
 from gensim.models import word2vec
 from gensim.models.word2vec import Word2Vec
 import numpy as np
@@ -15,11 +15,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import spacy
 import string
-
+#python -m spacy download en
 from gensim.models import KeyedVectors
-wv = KeyedVectors.load('D:/Main_Project/vectors.kv')
+wv = KeyedVectors.load('vectors.kv')
 
-data = pd.read_csv("D:/Main_Project/IMDB_Dataset.csv",error_bad_lines=False, engine="python")
+data = pd.read_csv("./IMDB_Dataset.csv",error_bad_lines=False, engine="python")
 print(data.head())
 
 def sent_vec(sent):
