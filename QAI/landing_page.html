@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  type="text/css" rel="stylesheet" href="home.css">
+    <title>Q&AI</title>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="logo.svg" alt="logo">
+    </div>
+    <div class="content">
+        <div class="sidebar">
+            <div class="sidebar-items">
+                Past Scores
+            </div>
+            <div class="sidebar-items">
+                interview Tips
+            </div>
+            <div class="sidebar-items">
+                Edit Profile
+            </div>
+        </div>
+        <div class="home">
+            <div class="home-content">
+                <div>
+                    Navigate the Interview<br/> Landscape with confidence
+                </div>
+                <button class="startInterview" onclick="openForm()">Take Your Interview</button>
+            </div>
+        </div>
+    </div>
+    <img src="stock1.png" class="stock" alt=" "/>
+    <div class="overlay" id="overlay">
+        <div class="popup-form">
+            <!-- <span class="close-btn" onclick="closeForm()">X</span> -->
+            <!-- <h2>Popup Form</h2> -->
+            <form action="interview_page.html">
+                <!-- Your form fields go here -->
+                <div class="popup">
+                    <label for="name">Upload Resume</label>
+                    <input type="file" id="name" class="resume" required>
+        
+                    <label for="email">Choose the number of questions </label>
+                    <div class="range">
+                        <span>5</span>
+                        <span>12</span>
+                    </div>
+                    <input type="range" id="NoQues" class="email" min="5" max="12" required>
+        
+                    <button type="submit" class="start">Start</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Function to open the popup form
+        function openForm() {
+            document.getElementById('overlay').style.display = 'flex';
+        }
+    
+        // Function to close the popup form
+        function closeForm() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

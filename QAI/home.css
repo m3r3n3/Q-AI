@@ -1,0 +1,186 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    overflow: hidden;
+}
+.header{
+    width:100%;
+    height:20vh;
+    background: #4EC261;
+}
+.logo{
+    padding: 40px 0px 20px 100px;
+}
+.content{
+    width:100vw;
+    height:80vh;
+    display: flex;
+    flex-direction: row;
+}
+.sidebar{
+    width:20vw;
+    height:80vh;
+    display: flex;
+    flex-direction: column;
+    background: #1F7D2E;
+}
+.sidebar-items{
+    width:100%;
+    height:20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+}
+.sidebar-items:hover{
+    background: #4bee66;
+    cursor: pointer;
+}
+.home{
+    width:80vw;
+    height:80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.home-content{
+    width:55vw;
+    height:60vh;
+    margin-right: 300px;
+    display: flex;
+    border-radius: 35px;
+    border: 2px solid #000;
+    background: #FAFAFA;
+    font-family: Poppins;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    margin:auto;
+    flex-direction: column;
+    padding: 60px 50px;
+    align-items: space-between;
+    justify-content: space-between;
+}
+.startInterview{
+    width:335px;
+    height:60px;
+    margin:5px;
+    border-radius: 35.5px;
+    background: #4EC261;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.startInterview:hover{
+    background: #4bee66;
+    cursor: pointer;
+}
+.start:hover{
+    background: #4bee66;
+    cursor: pointer;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Styling for the popup form */
+.popup-form {
+    border-radius: 30px;
+    border: 2px solid #000;
+    background: #FAFAFA;
+    padding: 20px;
+}
+
+/* Styling for the close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+/* input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #4EC261, #4EC261);
+    outline: none;
+    margin: 10px 0;
+}
+
+/* Styling for the thumb (slider handle) */
+/* input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4EC261; /* Set the color of the thumb */
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* Styling for the thumb in Firefox */
+/* input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4EC261; /* Set the color of the thumb */
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+} */ 
+.popup{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.75rem;
+    column-gap: 0px;
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.range{
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: space-between;
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+}
+.start{
+    width: 366px;
+    height: 67px;
+    border-radius: 30px;
+    border: 2px solid #000;
+    margin: auto;
+    background: #4EC261;
+}
+.stock{
+    position: absolute;
+    bottom: -30px; 
+    right: 80px;
+}
