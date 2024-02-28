@@ -8,13 +8,19 @@ import speech_recognition as sr
 import os
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
-from fastpunct import FastPunct
+# from fastpunct import FastPunct
 import shutil
+import subprocess 
+  
+
 # create a speech recognition object
 r = sr.Recognizer()
-fastpunct = FastPunct()
+# fastpunct = FastPunct()
+
 sound = AudioSegment.from_mp3("transcribe3.mp3")
 sound.export("transcribe3.wav", format="wav")
+# convert mp3 to wav file 
+# subprocess.call(['ffmpeg', '-i', 'transcribe.mp3', 'transcribe.wav'])
 path = "transcribe3.wav"
 
 # a function to recognize speech in the audio file
@@ -25,7 +31,7 @@ def transcribe_audio(path):
         audio_listened = r.record(source)
         # try converting it to text
         text = r.recognize_google(audio_listened)
-        fastpunct.punct([text])
+        # fastpunct.punct([text])
     return text
 
 # a function that splits the audio file into chunks on silence
